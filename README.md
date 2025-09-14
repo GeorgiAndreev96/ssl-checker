@@ -54,7 +54,7 @@ cd frontend
 npm install
 npm run dev
 
-⚙️ Deployment (Ubuntu + Nginx)
+## ⚙️ Deployment (Ubuntu + Nginx)
 
 Copy backend to /opt/sslchecker/backend
 
@@ -109,7 +109,7 @@ systemctl restart nginx
 
 
 
-📦 Environment Variables
+## 📦 Environment Variables
 
 If using a database:
 

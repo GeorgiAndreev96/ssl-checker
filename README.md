@@ -17,6 +17,7 @@ It allows you to check SSL/TLS expiration and details for any domain.
 
 ## 📂 Project Structure
 
+```
 ssl-checker/
 │── backend/ # FastAPI backend
 │ ├── app/
@@ -32,14 +33,12 @@ ssl-checker/
 │ └── package.json
 │
 └── README.md
-
+```
 
 ## 🛠️ Installation (Manual)
 
 ### 1. Clone the repo
-```bash
 git clone https://github.com/GeorgiAndreev96/ssl-checker.git
-cd ssl-checker
 
 cd backend
 python3.11 -m venv venv
@@ -50,7 +49,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 cd frontend
 npm install
 npm run dev
-```
+
 ⚙️ Deployment (Ubuntu + Nginx)
 
 Copy backend to /opt/sslchecker/backend
@@ -100,13 +99,12 @@ server {
     }
 }
 ```
-
 systemctl restart nginx
-📦 Environment Variables
-If using a database (optional):
 
-env
-Copy code
+📦 Environment Variables
+If using a database:
+Update /opt/sslchecker/backend/app/db.py:
+
 DATABASE_URL=mysql+pymysql://<user>:<password>@<rds-endpoint>:3306/sslchecker
 
 

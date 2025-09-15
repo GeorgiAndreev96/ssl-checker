@@ -1,6 +1,6 @@
 # 🔒 SSL Checker
 
-A simple **SSL certificate checker** with a FastAPI backend and a React frontend.  
+A simple **SSL certificate checker** with a FastAPI backend and a JS frontend.  
 It allows you to check SSL/TLS expiration and details for any domain.
 
 ---
@@ -9,7 +9,7 @@ It allows you to check SSL/TLS expiration and details for any domain.
 - ✅ Check SSL certificate validity for a given domain
 - ✅ View expiry date, issuer, and validity period
 - ✅ REST API built with FastAPI
-- ✅ Frontend built with React (served by Nginx)
+- ✅ Frontend built with JS (served by Nginx)
 - ✅ Deployment-ready with systemd + Nginx
 - ✅ Optional MySQL (RDS) integration via SQLAlchemy
 
@@ -21,16 +21,17 @@ It allows you to check SSL/TLS expiration and details for any domain.
 ssl-checker/
 │── backend/ # FastAPI backend
 │ ├── app/
-│ │ ├── main.py # FastAPI entrypoint
-│ │ ├── routes/ # API routes
-│ │ └── services/ # SSL logic
-│ ├── requirements.txt
-│ └── setup_sslchecker.sh
+│ │ ├── main.py  # FastAPI entrypoint
+│ │ ├── db.py  # DB Config file
+│ │ ├── __init__.py  # empty file
+│ │ ├── models.py  # DB import
+│ │ ├── setup_sslchecker.sh  #SSL Checker installation
+│ │ └── ssl_checker.py  # Main app file
+│ └── requirements.txt  # Requiered packages install
 │
-│── frontend/ # React frontend (Vite)
-│ ├── src/
-│ ├── public/
-│ └── package.json
+│── frontend/ # JS frontend
+│ ├── app.js
+│ └── index.html
 │
 └── README.md
 ```
